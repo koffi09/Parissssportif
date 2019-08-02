@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Parisportif|Accueil</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+ <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <!------ Include the above in your HEAD tag ---------->
+ </head>
+<body>
+<div class="container">
+    <div class="row">
+      <div class="contenu" >
+          <div class="col-lg-12">
+          <h1 style="text-align:center">  BIENVENU A LA PLATEFORME DE PARIS SPORTIF</h1>
+        </div> 
+    </div>
+   </div>
+</div>
+<section class="quatre">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 marge">
+                        <h3 class="titre text-center"style="font-size:30px">
+                            Ça t'intéresse?, Paris pour gagner !
+                        </h3>
+                </div>
+            
+                <div class="row">
+                       <div class="col-lg-6">
+                <h2><a class="btn1" style="text-decoration:none"> Match du jour</a></h2>
+                </div>
+                <!----<div class="col-lg-6">
+                <h2><a href="" class="btn1" style=> Match du jour</a></h2>
+                </div>--->
+            </div>
+        </div>
+        </div>
+    </section>
+    <style type="text/css">
+        .btn1{
+        border-radius: 0px;
+        left:-150px;
+        padding: 10px 24px;
+        border: 2px solid green ;
+        font-size: 40px;
+        color: green;
+        font-family: 'Playfair Display', serif;
+        box-shadow: 20px 10px 10px #dbdbdb;
+        transition: .3s;}
+       .btn2
+       {
+        border-radius: 0px;
+        left:-150px;
+        padding: 10px 24px;
+        border: 2px solid blue;
+        font-size: 40px;
+        color:blue;
+        font-family: 'Playfair Display', serif;
+        box-shadow: 20px 10px 10px #dbdbdb;
+        transition: .3s;}
+
+     .quatre{
+     top: -80px;
+     } 
+     a{
+        text-decoration:none;
+     }
+    .titre,h3,h5,h1 {
+
+     font-family: 'Playfair Display', serif;
+     font-size:55px;
+    
+     }
+
+      .price {
+        font-size:20px;
+    background: #183661;
+    color: #fff; }
+    
+</style>
+    
+    <div class="container"><br> <br>
+	<div class="row">
+    	<!-- BEGIN PRODUCTS -->
+             
+
+             
+        <div class="col-md-6 col-sm-6">
+    		<span class="thumbnail">
+      			<h4 style="text-align: center;font-size:40px">{{rencontre1.nom_championat}}</h4>
+      			<div class="ratings">
+                   <h5 style="font-size:30px;text-align:center"> </h5>
+                   <p> Date:{{rencontre1.date}} </p>
+                   
+                   <p class="price">--Cote---: {{pays1.nom_pays}}:{{pays1.cote_pays}} - {{pays2.nom_pays}}:{{pays2.cote_pays}}  </p> 
+                    
+                </div>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-12 col-sm-6">
+                         
+      				</div>
+                        
+                      <div class="col-md-6 col-sm-6">
+                     <h2><a href="{% url 'Myappparisportif:parier'%}{{rencontre1.id}}{{rencontre1.nom_championat}}" class="btn1" style="text-decoration:none"> Parier</a></h2>
+      				</div>
+      			</div>
+    		</span>
+          </div>
+          
+           <div class="col-md-6 col-sm-6">
+                <span class="thumbnail">
+                      <h4 style="text-align: center;font-size:40px">{{rencontre2.nom_championat}}</h4>
+                      <div class="ratings">
+                       <h5 style="font-size:30px;text-align:center"> </h5>
+                       <p> Date: </p>
+                       
+                       <p class="price">--Cote---: {{pays3.nom_pays}}:{{pays3.cote_pays}} - {{pays4.nom_pays}}:{{pays4.cote_pays}}  </p> 
+                        
+                    </div>
+                      <hr class="line">
+                      <div class="row">
+                          <div class="col-md-12 col-sm-6">
+                             
+                          </div>
+                            
+                          <div class="col-md-6 col-sm-6">
+                         <h2><a href="{% url 'Myappparisportif:parier'%}{{rencontre2.id}}{{rencontre2.nom_championat}}" class="btn1" style="text-decoration:none"> Parier</a></h2>
+                          </div>
+                      </div>
+                </span>
+              </div>
+               <h2><a class="btn2" style="text-decoration:none;margin-left:-10px"> Match de demain</a></h2>
+        </div>
+    </div>
+          
+  		<!-- END PRODUCTS -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                 <h1 style="color:#fff;text-align: center;background-color:black"> Paris-foot - tous droits réservés</h1>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
